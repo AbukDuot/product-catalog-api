@@ -150,6 +150,8 @@ Authorization: Bearer <JWT_TOKEN>
 "productId": "67e15e214feba4e458cbb051",
  "stockCount": 100
 }
+```
+
 ---
 
 ## **Assumptions and Limitations**
