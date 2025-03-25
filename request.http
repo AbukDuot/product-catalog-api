@@ -18,12 +18,12 @@ Content-Type: application/json
 }
 
 ### Get All Users
-GET http://localhost:5000/api/auth/users/67e05817455aed66390578e1
-Authorization: Bearer <eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZTA1ODE3NDU1YWVkNjYzOTA1NzhlMSIsImlhdCI6MTc0MjkzNTU5NiwiZXhwIjoxNzQ1NTI3NTk2fQ.6kvnC-Qnhgb8VwyUnh0xscsyO1FRtn9yUbGdmRc3Fs0>
+GET http://localhost:5000/api/auth/users
+Authorization: Bearer <JWT_TOKEN>
 
 ### Delete User
 DELETE http://localhost:5000/api/users/67e05817455aed66390578e1
-Authorization: Bearer <eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZTA1ODE3NDU1YWVkNjYzOTA1NzhlMSIsImlhdCI6MTc0MjkzNTU5NiwiZXhwIjoxNzQ1NTI3NTk2fQ.6kvnC-Qnhgb8VwyUnh0xscsyO1FRtn9yUbGdmRc3Fs0>
+Authorization: Bearer <JWT_TOKEN>
 
 ---
 
@@ -72,7 +72,7 @@ Authorization: Bearer <JWT_TOKEN>
 
 ### Delete Product
 DELETE http://localhost:5000/api/products/67e1b55ef551e4cd968823e9
-Authorization: Bearer <>
+Authorization: Bearer <JWT_TOKEN>
 
 ---
 
@@ -91,5 +91,5 @@ GET http://localhost:5000/api/inventory
 Authorization: Bearer <JWT_TOKEN>
 
 ### Delete Inventory Entry
-DELETE http://localhost:5000/api/inventory/67e1b50bf551e4cd968823e3
+DELETE http://localhost:5000/api/inventories/67e1b50bf551e4cd968823e3
 Authorization: Bearer <JWT_TOKEN>
