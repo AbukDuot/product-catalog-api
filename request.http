@@ -1,0 +1,95 @@
+### Register a User
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "John",  // Ensure the username is unique
+  "password": "john2023",
+  "role": "user"
+}
+
+### Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "Abuk",
+  "password": "Harobed2023"
+}
+
+### Get All Users
+GET http://localhost:5000/api/auth/users/67e05817455aed66390578e1
+Authorization: Bearer <eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZTA1ODE3NDU1YWVkNjYzOTA1NzhlMSIsImlhdCI6MTc0MjkzNTU5NiwiZXhwIjoxNzQ1NTI3NTk2fQ.6kvnC-Qnhgb8VwyUnh0xscsyO1FRtn9yUbGdmRc3Fs0>
+
+### Delete User
+DELETE http://localhost:5000/api/users/67e05817455aed66390578e1
+Authorization: Bearer <eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZTA1ODE3NDU1YWVkNjYzOTA1NzhlMSIsImlhdCI6MTc0MjkzNTU5NiwiZXhwIjoxNzQ1NTI3NTk2fQ.6kvnC-Qnhgb8VwyUnh0xscsyO1FRtn9yUbGdmRc3Fs0>
+
+---
+
+### Create a Category
+POST http://localhost:5000/api/categories
+Content-Type: application/json
+Authorization: Bearer <JWT_TOKEN>
+
+{
+  "name": "Hp"
+}
+
+### Get All Categories
+GET http://localhost:5000/api/categories
+Authorization: Bearer <JWT_TOKEN>
+
+
+### Delete Category
+DELETE http://localhost:5000/api/categories/667e30d0474f43e9976f87ca9
+Authorization: Bearer <JWT_TOKEN>
+
+---
+
+### Create a Product
+POST http://localhost:5000/api/products
+Content-Type: application/json
+Authorization: Bearer <JWT_TOKEN>
+
+{
+  "name": "Laptop",
+  "description": "At affortable price",
+  "price": 100,
+  "category": "65f7c4e5d4d9e40b88c1a123",
+  "variants": [
+    {
+      "_id": "67e15e214feba4e458cbb052"
+    }
+  ],
+  "stock": 0,
+  "discount": 5
+}
+
+### Get All Products
+GET http://localhost:5000/api/products
+Authorization: Bearer <JWT_TOKEN>
+
+### Delete Product
+DELETE http://localhost:5000/api/products/67e1b55ef551e4cd968823e9
+Authorization: Bearer <>
+
+---
+
+### Create an Inventory Entry
+POST http://localhost:5000/api/inventory
+Content-Type: application/json
+Authorization: Bearer <JWT_TOKEN>
+
+{
+  "productId": "67e194a1d6aaa623358eefe6",
+  "quantity": 50
+}
+
+### Get All Inventories
+GET http://localhost:5000/api/inventory
+Authorization: Bearer <JWT_TOKEN>
+
+### Delete Inventory Entry
+DELETE http://localhost:5000/api/inventory/67e1b50bf551e4cd968823e3
+Authorization: Bearer <JWT_TOKEN>
